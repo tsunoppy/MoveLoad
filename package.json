@@ -1,0 +1,36 @@
+{
+  "name": "moveload",
+  "version": "1.0.0",
+  "description": "maximum stress diagram due to moving load",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test",
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win64,osx64,linux64 --buildDir dist/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsunoppy/MoveLoad.git"
+  },
+  "keywords": [
+    "structure",
+    "crane",
+    "moving",
+    "load",
+    "simplebeam",
+    "girder"
+  ],
+  "author": "tsunoda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsunoppy/MoveLoad/issues"
+  },
+  "homepage": "https://github.com/tsunoppy/MoveLoad#readme",
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "nw": "^0.49.0",
+    "nw-builder": "^3.5.7"
+  }
+}
