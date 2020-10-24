@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<!--
+    Coded by Tsunoda @Bangkok
+  -->
+
+<html lang="en">
+  <head>
+    <title>MoveLoad</title>
+    <meta charset="utf-8">
+    <script src="./module/Chart.js"></script>
+    <link rel="stylesheet" href="style/colana.css">
+    <link rel="stylesheet" href="style/tab.css">
+    <style></style>
+  </head>
+
+  <body id="" >
+
+    <div class="boxA">
+
+      <!--
+	-----------------------------------------------------
+	-->
+      <div class="no_print">
+	<div class="box5B" style="border-bottom: 2px solid black;">
+
+	  <ul id="tab2">
+	    <li class="present"><a href="#page11">Analysis</a></li>
+	    <li><a href="#page12">Reference</a></li>
+	    <li><a href="#page13">Docs</a></li>
+	    <li><a href="#page14">-</a></li>
+	  </ul>
+
+	</div>
+      </div>
+
+
+      <div class="box5R">
+
+	  <!--
+	       Output Tag !!
+	     -----------------------------------------------------
+	     -->
+
+	  <div id="page11">
+
+	      <!-- Header Control
+		 -----------------------------------------------------
+		 -->
+	      <div class="no_print">
+		  <div class="boxBackControl"></div>
+	      </div>
+	      <!--
+		 -----------------------------------------------------
+		 -->
+
+	      <h2 id="outTitle"> </h2>
+
+	      <hr>
+
+	      <div id="description"></div>
+
+	      <div id="designCondition"></div>
+
+	      <div id="LoadCondition_U"></div>
+
+	      <div id="LoadCondition"></div>
+
+	      <div id="picture"> </div>
+
+	      <div id="test"></div>
+
+	      <div class="graphL">
+		  <div>
+		      <canvas height="200px" width="300px" id="Chart_X"></canvas>
+		  </div>
+	      </div>
+
+	      <div class="graphR">
+		  <div>
+		      <canvas height="200px" width="300px" id="Chart_Y"></canvas>
+		  </div>
+	      </div>
+
+	      <!-- Analysis Result -->
+	      <div id="outAnalysis" ></div>
+
+	  </div> <!-- End Page 11 -->
+
+	  <div id="page12"> <!-- Ref. -->
+
+	  <!-- Header Control
+	    -----------------------------------------------------
+	    -->
+	  <div class="no_print">
+	    <div class="boxBackControl"></div>
+	  </div>
+	  <!--
+	    -----------------------------------------------------
+	    -->
+
+	  <h1>
+	      The calculation of the simple beam.
+	  </h1>
+
+	  <hr>
+
+
+	  <h2> Point load </h2>
+
+	  <p>
+	      The stress due to the point loading is going to be calculated by the formula as bellow.
+	  </p>
+
+	    <p>
+	      Under Construction
+	    </p>
+	    
+	  <h2> Output data</h2>
+	  <div id="output_stress" ></div>
+
+	  </div> <!-- End Ref. -->
+
+	<div id="page13"> <!-- Docs -->
+
+	  <!-- Header Control
+	    -----------------------------------------------------
+	    -->
+	  <div class="no_print">
+	    <div class="boxBackControl"></div>
+	  </div>
+	  <!--
+	    -----------------------------------------------------
+	    -->
+
+	  <h2>
+	    How to use "MoveLoad".
+	  </h2>
+
+	  <p>
+	    Welcome to "MoveLoad" to calculate the stress of the simple beam model due to moving loads for the crane.
+	  </p>
+
+	  <hr>
+
+	  <h2>
+	      General, Menu Bar.
+	  </h2>
+
+	  <h3>- File </h3>
+
+	  <table>
+	      <tbody>
+		  <tr><td width="150px">New File:
+		  </td><td>  Reload window
+		  </td></tr>
+		  <tr><td>Open:
+		  </td><td> Open the input file
+		  </td></tr>
+		  <tr><td>Save:
+		  </td><td> Save the current input
+		  </td></tr>
+		  <tr><td>Print:
+		  </td><td> print the page of "Analysis" tab
+		  </td></tr>
+		  <tr><td>Close:
+		  </td><td> Close current window
+		  </td></tr>
+		  <tr><td>Exit:
+		  </td><td> Exit application
+		  </td></tr>
+	      </tbody>
+	  </table>
+
+	  <h3>- Edit </h3>
+
+	  <table>
+	      <tbody>
+		  <tr><td width="150px"> Cut:
+		  </td><td> cutting window
+		  </td></tr>
+		  <tr><td> Copy:
+		  </td><td> copy window
+		  </td></tr>
+		  <tr><td>Paste:
+		  </td><td> paste text from copy
+		  </td></tr>
+	      </tbody>
+	  </table>
+
+	  <h3> - View </h3>
+	  <p>
+	      Changing the window size.
+	  </p>
+
+	  <h3> - Tools </h3>
+	  <p>
+	      Developer mode can check the souse code.
+	  </p>
+
+	  <h3> - Help </h3>
+
+	  <p>
+	      Copyright, Contact
+	  </p>
+
+	  <!--
+	       <h3>Design</h3>
+	       Units select, SI or MKS
+	     -->
+
+	  <hr>
+
+	  <h2>
+	    Input Data
+	  </h2>
+
+	  <h3>- Geometry</h3>
+
+	  <table>
+	      <tbody>
+		  <tr><td width="150px">Span:
+		  </td><td>  Span of the single beam
+		  </td></tr>
+		  <tr><td> Young Mod.
+		  </td><td> Young's Modulus of the girder.
+		  </td></tr>
+		  <tr><td> Inertia
+		  </td><td> Inertia of the girder.
+		  </td></tr>
+	      </tbody>
+	  </table>
+
+	  <h3>- Loads</h3>
+
+	  <table>
+	      <tbody>
+		  <tr><td width="150px">&omega;
+		  </td><td>  Distributed load, such as self weight.
+		  </td></tr>
+		  <tr><td> Load;
+		  </td><td> Wheel Load
+		  </td></tr>
+		  <tr><td> Spacing
+		  </td><td> Spacing dimension from the one before.
+		  </td></tr>
+		  <tr><td> Impact Factor.
+		  </td><td> Impact factor multiplying wheel load.
+		  </td></tr>
+	      </tbody>
+	  </table>
+
+	  <h3>- General</h3>
+
+	  <table>
+	      <tbody>
+		  <tr><td width="150px"> Title;
+		  </td><td>  Title of the analysis
+		  </td></tr>
+		  <tr><td> Coments by HTML souse
+		  </td><td> Description of the analysis
+		  </td></tr>
+		  <tr><td> Data Control
+		  </td><td> Maximum figure, when making the graph.
+		  </td></tr>
+	      </tbody>
+	  </table>
+
+	  <hr>
+
+	  <h2>
+	    Output
+	  </h2>
+
+	  <h3>- Analysis</h3>
+	  <p>After make the input data, please click "result" button. result will show to the output DOM</p>
+
+	  <h3>- Ref.</h3>
+	  <p>
+	      Reference documents for the crane Loading.
+	  </p>
+
+	<hr>
+
+	</div><!-- End Docs -->
+
+
+	<div id="page14">
+
+	    <!--
+	    <h3>
+		Units
+	    </h3>
+
+	    <hr>
+
+	    <p>
+		Please select the desired units systems:
+	    </p>
+
+	    <p>
+		<input type="radio" name="uni" id="SI">
+		SI units (kN, m, MPa)
+	    </p>
+
+	    <p>
+		<input type="radio" name="uni" id="MKS" >
+		MKS units (Tn, m, cm, Kg/cm<sup>2</sup>)
+	    </p>
+
+	    <p>
+		<input type="button" value="OK" onclick="units();">
+	    </p>
+
+	    -->
+	</div>
+
+	<!--
+	     End page-14
+	   -->
+
+
+      </div>
+      <!-- box5R Finish
+	-----------------------------------------------------
+	-->
+
+
+      <div class="no_print">
+	<div class="box5L" style="border-left: 2px solid black; line-height: 1.0em;">
+
+	  <form name="inputForm">
+
+	    <ul id="tab">
+	      <li class="present"><a href="#page1">Geometry</a></li>
+	      <li><a href="#page2">Loads</a></li>
+	      <li><a href="#page3">General</a></li>
+	      <!--
+		  <li><a href="#page4">General</a></li>
+		  -->
+	      <li>
+		&nbsp;&nbsp;&nbsp;
+		<input class="big2" id="chkBtn" type="button" value="Result" onclick="main(this.form);">
+	      </li>
+	    </ul>
+
+	    <!-- Geometry -->
+
+	    <div id="page1">
+
+	      <div class="inputdata">
+		<h3> - General </h3>
+		<table>
+		  <tbody>
+		    <tr>
+		      <td width="100pt">
+			Span: L =
+			&nbsp;&nbsp;&nbsp;
+		      </td>
+		      <td>
+			  <input type="text" id="span" onChange="DrawSec(this.form)">
+		      </td>
+		      <td>
+			m
+		      </td>
+		    </tr>
+		    <tr>
+
+		    </tr>
+		  </tbody>
+		</table>
+
+		<h3> - Properties </h3>
+
+		<table>
+		  <tbody>
+		    <tr>
+		      <td width="100pt">
+			Yong Mod., E<sub>s</sub> =
+		      </td>
+		      <td>
+			<input class="w70" type="text" id="Es" >
+		      </td>
+		      <td>
+			N/mm<sup>2</sup>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td>
+			Inertia, I<sub>s</sub> =
+		      </td>
+		      <td>
+			<input class="w70" type="text" id="Is" >
+		      </td>
+		      <td>
+			cm<sup>4</sup>
+		      </td>
+		    </tr>
+		  </tbody>
+		</table>
+
+		<h3> - Analysis span increment control </h3>
+
+		<table>
+		  <tbody>
+		    <tr>
+		      <td width="100pt">
+			&Delta;x =
+		      </td>
+		      <td>
+			span/
+			<input class="w30" type="text" id="ndiv" >
+		      </td>
+		      <td>
+			
+		      </td>
+		    </tr>
+		  </tbody>
+		</table>
+
+	      </div>
+
+	    </div>
+
+	    <!-- Loads -->
+	    <div id="page2">
+
+	      <h3> - Uniform Loading </h3>
+	      <table><tbody>
+		  <tr>
+		    <td>
+		      &omega; =
+		    </td>
+		    <td>
+		      <input type="text" id="wSelf" >
+		    </td>
+		    <td>
+		      kN/m
+		    </td>
+		  </tr>
+		</tbody>
+	      </table>
+
+	      <h3> - Point Loads </h3>
+	      &nbsp;&nbsp;&nbsp;&nbsp;
+	      <img src="images/MoveLoad.jpg" alt="Stress Location" width="250px" /><br  />
+	      <p>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<u>
+		  Load Diagram
+		</u>
+	      </p>
+	      <br>
+
+	      <table><tbody>
+		  <tr>
+	    <td>
+		      Load Num.:
+		    </td>
+		    <td>
+		      <input type="text" id="LoadNum" >
+		      (Max. 10 Points)
+		      <input type="button" value="Add" onclick="addLoad();">
+		      <input type="button" value="Remove" onclick="removeLoad();">
+		    </td>
+		  </tr>
+	      </tbody></table>
+
+	      <table>
+		<tbody>
+
+		  <tr>
+		    <td width="50pt">
+		      No.
+		    </td>
+		    <td width="100pt">
+		      Load
+		      kN
+		    </td>
+		    <td width="100pt">
+		      Spacing
+		      m
+		    </td>
+		    <td width="100pt">
+		      Impact Fac.
+		    </td>
+		  </tr>
+
+		  <tr>
+		    <td>
+		      No.1:
+		    </td>
+		    <td>
+		      P<sub>1</sub>=
+		      <input type="text" id="p_01" >
+		    </td>
+		    <td>
+		      s<sub>1</sub>=
+		      <input type="text" id="s_01" >
+		    </td>
+		    <td>
+		      <input type="text" id="pv_01" >
+		    </td>
+		  </tr>
+
+		  <tr id="1"></tr>
+		  <tr id="2"></tr>
+		  <tr id="3"></tr>
+		  <tr id="4"></tr>
+		  <tr id="5"></tr>
+		  <tr id="6"></tr>
+		  <tr id="7"></tr>
+		  <tr id="8"></tr>
+		  <tr id="9"></tr>
+		  <tr id="10"></tr>
+
+		</tbody>
+	      </table>
+
+	    </div>
+
+
+	    <!-- General -->
+	    <div id="page3">
+
+
+	      <h3>- Title
+
+	      </h3>
+
+	      <p>
+		<input type="text" id="title" style="width:270px">
+	      </p>
+
+	      <h3>
+		- Coments by HTML souse
+	      </h3>
+
+	      <p>
+		<textarea id="memo" cols="32" rows="20">
+		</textarea>
+	      </p>
+
+	      <h3>
+		- Data Control
+	      </h3>
+
+	      <table>
+		<tbody>
+		  <tr>
+		    <td>
+		      Moment
+		      &nbsp;&nbsp;
+		    </td>
+		    <td>
+		      Max:
+		    </td>
+		    <td>
+		      <input type="text" id="gMax" onChange="main(this.form)">
+		      kN.m
+		    </td>
+		  </tr>
+
+		  <tr>
+		    <td>
+		      Shear
+		    </td>
+		    <td>
+		      Max:
+		    </td>
+		    <td>
+		      <input type="text" id="vMax"  onChange="main(this.form)">
+		      kN
+		    </td>
+		  </tr>
+
+		</tbody>
+	      </table>
+
+	      <p>
+		  *) Auto control by zero.
+	      </p>
+
+	    </div>
+
+	    <!--
+		 <div id="page4">
+		 </div>
+	       -->
+
+	    <!--
+		 End Input Tag.
+	       -->
+	  </form>
+	</div>
+      </div>
+      <!--
+	   no_print
+	 -->
+    </div>
+
+    <script src="app/move.js"></script>
+    <script src="app/tab.js"></script>
+    <script src="app/menu.js"></script>
+    <!--
+	 <script src="app/unit.js"></script>
+       -->
+
+  </body>
+
+</html>
