@@ -1,0 +1,95 @@
+/*
+body {
+    color: #333;
+    font-family: "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", Verdana, sans-serif;
+    font-size: 62.5%;
+    line-height: 1.5;
+    text-align: center
+}
+*/
+h1 {font-size: 1.5em;}
+ul, div {font-size: 12px; list-style-type: none;}
+#container {
+    width: 66.6%;
+    //width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#tab {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #333;
+    height: 1.5em;
+    overflow: hidden;
+}
+#tab li {
+    float: left;
+    width: 64px;
+    height: 1.5em;
+}
+#tab li a {
+    display: block;
+    width: 60px;
+    height: 1.5em;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    color: #777;
+    text-align: center;
+    text-decoration: none;
+}
+#tab li a:hover,
+#tab li.present a {
+    border-color: #333;
+    color: #000;
+}
+
+#page1, #page2, #page3, #page4, #page5 {
+    //margin-bottom: 12em;
+    //padding-top: 1em;
+    padding-left: 1em;
+}
+
+/*
+////////////////////////////////////////////////////////////////////////
+*/
+
+#tab2 {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #333;
+    height: 1.5em;
+    overflow: hidden;
+}
+#tab2 li {
+    float: left;
+    width: 84px;
+    height: 1.5em;
+}
+#tab2 li a {
+    display: block;
+    width: 80px;
+    height: 1.5em;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    color: #777;
+    text-align: center;
+    text-decoration: none;
+}
+#tab2 li a:hover,
+#tab2 li.present a {
+    border-color: #333;
+    color: #000;
+}
+
+#page11, #page12, #page13, #page14{
+    padding-left: 1em;
+}
+
+@media print{
+    .no_print{
+	display: none;
+    }
+}
